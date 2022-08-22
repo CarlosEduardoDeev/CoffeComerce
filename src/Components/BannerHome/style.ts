@@ -18,7 +18,6 @@ const iconsVariants = {
 
 export const BannerHomeContainer = styled.div`
     height: 34rem;
-    background-repeat: no-repeat;
     background-image: url(${background});
     display: flex;
     justify-content: center;
@@ -49,6 +48,7 @@ export const TitleHome = styled.div`
         font-weight: 400;
         line-height: 1.625rem;
         gap: 12px;
+        padding:  1rem 0rem;
     }
 `
 
@@ -93,5 +93,7 @@ export const SubtitlesBannerHome = styled.div`
     gap: 20px;
     flex-wrap: wrap;
     display: flex;
+    margin-top: 4.125rem;
+    align-items: center;
     
 `
