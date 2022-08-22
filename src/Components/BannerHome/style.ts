@@ -18,6 +18,7 @@ const iconsVariants = {
 
 export const BannerHomeContainer = styled.div`
     height: 34rem;
+
     background-image: url(${background});
     display: flex;
     justify-content: center;
@@ -94,6 +95,5 @@ export const SubtitlesBannerHome = styled.div`
     flex-wrap: wrap;
     display: flex;
     margin-top: 4.125rem;
-    align-items: center;
     
 `
