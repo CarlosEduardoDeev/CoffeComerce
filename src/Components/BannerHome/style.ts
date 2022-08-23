@@ -19,16 +19,13 @@ const iconsVariants = {
 export const BannerHomeContainer = styled.div`
     height: 34rem;
 
+    background-size: cover;
     background-image: url(${background});
     display: flex;
     justify-content: center;
     align-items: center;
     gap:3.5rem;
-    img{
-        width:29.75rem;
-        height: 22.5rem;
-       
-    }
+    
 `
 export const TextHomeContainer = styled.div`
     display: flex;
@@ -48,7 +45,6 @@ export const TitleHome = styled.div`
         font-size: 1.25rem;
         font-weight: 400;
         line-height: 1.625rem;
-        gap: 12px;
         padding:  1rem 0rem;
     }
 `
@@ -94,6 +90,6 @@ export const SubtitlesBannerHome = styled.div`
     gap: 20px;
     flex-wrap: wrap;
     display: flex;
-    margin-top: 4.125rem;
+    margin-top: 2rem;
     
 `
