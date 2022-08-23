@@ -10,9 +10,6 @@ export const CardContainer = styled.div`
     flex-direction: column;
     background-color: ${props => props.theme["background-card"]};
 
-    img{
-        margin-top: -20px;
-    }
 
 `
 export const TitleTypeCoffeeCard = styled.div`

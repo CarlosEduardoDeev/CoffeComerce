@@ -11,8 +11,17 @@ export const TitleMenuCoffee = styled.div`
 `
 export const ListContainerCoffee = styled.div`
     display: flex;
+   
     margin-top: 3.375rem;
     flex-wrap: wrap;
     padding: 0 18.5rem;
+
+`
+export const ContainerListCoffee = styled.div`
+        display: flex;
+        gap: 32px;
+        width: 70rem;
+        
+       
 
 `

@@ -1,19 +1,27 @@
 import { CardContainer, DescriptionCoffee, TitleCoffe, TitleTypeCoffeeCard } from "./style";
+
 import CoffeeOne from '../../assets/CoffeTypes/CoffeeOne.svg'
 
-export function Card(){
+
+interface CoffesProps {
+  name: string;
+  type: string;
+  description: string;
+}
+
+
+export function Card({name,description,type}: CoffesProps){
     return(
       <CardContainer>
         <img src={CoffeeOne}/>
         <TitleTypeCoffeeCard>
-            TRADICIONAL
+            {type}
         </TitleTypeCoffeeCard>
         <TitleCoffe>
-            Expresso Tradicional 
+            {name}
         </TitleCoffe>
         <DescriptionCoffee>
-             O tradicional café feito com 
-             água quente e grãos moídos
+            {description}
         </DescriptionCoffee>
       </CardContainer>  
     )

@@ -1,6 +1,8 @@
 import { HomeBanner } from "../../Components/BannerHome";
 import { Card } from "../../Components/Card";
-import { ListContainerCoffee, TitleMenuCoffee } from "./style";
+import { coffees } from "../../Contexts/Context";
+import { ContainerListCoffee, ListContainerCoffee, TitleMenuCoffee } from "./style";
+
 
 
 export function Home(){
@@ -11,7 +13,18 @@ export function Home(){
         Nossos cafés
        </TitleMenuCoffee>
        <ListContainerCoffee>
-        <Card/>
+            <ContainerListCoffee>
+            {coffees.map(coffee =>{
+                return(
+                    <Card
+                    type={coffee.type}
+                    name={coffee.name}
+                    description={coffee.description}
+
+                    />
+                )
+            })}
+            </ContainerListCoffee>
        </ListContainerCoffee>
         </>
     )
