@@ -1,19 +1,20 @@
 import { CardContainer, DescriptionCoffee, TitleCoffe, TitleTypeCoffeeCard } from "./style";
 
-import CoffeeOne from '../../assets/CoffeTypes/CoffeeOne.svg'
 
 
 interface CoffesProps {
+  id: string;
   name: string;
   type: string;
-  description: string;
+  description: string
+  image: any;
 }
 
 
-export function Card({name,description,type}: CoffesProps){
+export function Card({name,description,type,image}: CoffesProps){
     return(
       <CardContainer>
-        <img src={CoffeeOne}/>
+            <img src={image}/>
         <TitleTypeCoffeeCard>
             {type}
         </TitleTypeCoffeeCard>

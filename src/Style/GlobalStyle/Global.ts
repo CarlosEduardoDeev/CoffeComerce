@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     } 
     body{
         background: ${(props) => props.theme['background']};
-       
-        position: relative;
+        
+     
     }
     
     body,input, textarea, button {

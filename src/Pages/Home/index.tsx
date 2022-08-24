@@ -1,13 +1,16 @@
+import { useContext } from "react";
 import { HomeBanner } from "../../Components/BannerHome";
 import { Card } from "../../Components/Card";
 import { coffees } from "../../Contexts/Context";
-import { ContainerListCoffee, ListContainerCoffee, TitleMenuCoffee } from "./style";
+import { ContainerListCoffee, ContainerPage, ListContainerCoffee, TitleMenuCoffee } from "./style";
 
 
+
+console.log(coffees)
 
 export function Home(){
     return (
-        <>
+        <ContainerPage>
        <HomeBanner/>
        <TitleMenuCoffee>
         Nossos cafés
@@ -17,15 +20,16 @@ export function Home(){
             {coffees.map(coffee =>{
                 return(
                     <Card
-                    type={coffee.type}
-                    name={coffee.name}
-                    description={coffee.description}
-
+                        id={coffee.id}
+                        image={coffee.image}
+                        type={coffee.type}
+                        name={coffee.name}
+                        description={coffee.description} 
                     />
                 )
             })}
             </ContainerListCoffee>
        </ListContainerCoffee>
-        </>
+        </ContainerPage>
     )
 }

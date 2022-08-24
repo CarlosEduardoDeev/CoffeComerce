@@ -11,6 +11,7 @@ export const HeaderContainer = styled.header`
         display: flex;
         gap: 0.5rem;
         align-items: center;
+        padding: 2rem 4rem ;
   
     }
    
@@ -20,6 +21,7 @@ export const IconContainer = styled.div`
     width: 2.375rem;
     height: 2.375rem;
     border-radius: 0.375rem;
+    
     background-color: ${(props) => props.theme["yellow-light"]};
     align-items: center;
     display: flex;
@@ -31,6 +33,7 @@ export const LocalContainerText = styled.div`
     width: 8.938rem;
     height:2.375rem;
     display: flex;
+    
     align-items: center;
     justify-content: center;
     background-color: ${(props) => props.theme["purple-light"]};

@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const ContainerPage = styled.div`
+    align-items: center;
+
+    flex-direction: column;
+    
+`
+
 export const TitleMenuCoffee = styled.div`
     display: flex   ;
     font-size: 2rem;
@@ -11,16 +18,20 @@ export const TitleMenuCoffee = styled.div`
 `
 export const ListContainerCoffee = styled.div`
     display: flex;
-   
+    justify-content: center;
+    align-items: center;
     margin-top: 3.375rem;
-    flex-wrap: wrap;
-    padding: 0 18.5rem;
+    border:2px solid red;
+   
 
 `
 export const ContainerListCoffee = styled.div`
         display: flex;
         gap: 32px;
-        width: 70rem;
+        flex-wrap: wrap;
+        width: 1120px;
+        height: 1360px;
+       
         
        
 
