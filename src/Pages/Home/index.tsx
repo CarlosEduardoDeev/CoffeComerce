@@ -1,14 +1,19 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { HomeBanner } from "../../Components/BannerHome";
 import { Card } from "../../Components/Card";
 import { coffees } from "../../Contexts/Context";
 import { ContainerListCoffee, ContainerPage, ListContainerCoffee, TitleMenuCoffee } from "./style";
 
 
+    
 
-console.log(coffees)
 
 export function Home(){
+
+    const [amount,setAmount] = useState(0)
+ 
+
+
     return (
         <ContainerPage>
        <HomeBanner/>
@@ -24,6 +29,7 @@ export function Home(){
                         image={coffee.image}
                         type={coffee.type}
                         name={coffee.name}
+                        amount={coffee.amount}
                         description={coffee.description} 
                     />
                 )

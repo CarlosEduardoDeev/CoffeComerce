@@ -50,3 +50,33 @@ export const DescriptionCoffee = styled.div`
     margin-top: 8px;
     color: ${props => props.theme["base-label"]};
 `
+export const PriceAndAmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    flex-direction: row;
+    margin-top: 33px;
+    margin-bottom: 20px;
+    
+    p{
+       line-height: 1.138rem;
+       font-weight: 400;
+       font-size: 0.875rem
+       
+      
+    }
+      strong{
+            font-family: 'Baloo 2';
+            font-weight: 800;
+            line-height: 1.95rem;
+            font-size: 1.5rem;
+        }
+
+`
+export const CounterContainer = styled.div`
+    width: 4.5rem;
+    height: 2.375rem;
+    background-color: ${props => props.theme["base-button"]};
+    color
+`

@@ -21,7 +21,7 @@ export const ListContainerCoffee = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 3.375rem;
-    border:2px solid red;
+    
    
 
 `
