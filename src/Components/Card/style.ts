@@ -58,6 +58,7 @@ export const PriceAndAmountContainer = styled.div`
     flex-direction: row;
     margin-top: 33px;
     margin-bottom: 20px;
+   
     
     p{
        line-height: 1.138rem;
@@ -75,8 +76,30 @@ export const PriceAndAmountContainer = styled.div`
 
 `
 export const CounterContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 4.5rem;
     height: 2.375rem;
     background-color: ${props => props.theme["base-button"]};
+    border-radius: 6px;
+    gap: 5px;
+    padding: 8px;
+
+    button{
+        
+        color: ${props => props.theme["purple"]};
+        border: unset;
+        background: none;
+        width: 14px;
+        height: 14px;
+    }
+
+    p{  
+        padding: 8px;
+        font-size: 1rem;
+        font-weight: 400;
+        color: ${props => props.theme["base-title"]};
+    }
     
 `

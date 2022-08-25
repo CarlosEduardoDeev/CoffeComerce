@@ -13,6 +13,11 @@ interface CoffesProps {
 
 
 export function Card({name,description,type,image}: CoffesProps){
+
+  const Start = () =>{
+    console.log('Test')
+  }
+  
     return(
       <CardContainer>
             <img src={image}/>
@@ -28,7 +33,14 @@ export function Card({name,description,type,image}: CoffesProps){
         <PriceAndAmountContainer>
           <p>R$<strong>9,90</strong></p>
           <CounterContainer>
-            
+            <button onClick={Start}>
+            <Minus />
+            </button>
+              
+                <p>1</p>
+            <button onClick={Start}>
+            <Plus/>
+            </button>
           </CounterContainer>
         </PriceAndAmountContainer>
       </CardContainer>  
