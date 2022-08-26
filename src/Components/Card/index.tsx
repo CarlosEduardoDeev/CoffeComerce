@@ -16,25 +16,37 @@ interface CoffesProps {
 
 export function Card({name,description,type,image,id,amount}: CoffesProps){
   const [shopingBuy,setShopingBuy] = useState([] as any)
+  const [contadorAmount,setContadorAmount] = useState(0)
+
 
 
   const idCoffes = id
+  function funcContadorPlus(){
+    setContadorAmount( contadorAmount + 1)
+  }
+  function funcContadorMinus(){
+    setContadorAmount( contadorAmount -1 )
+  }
 
   function AmountCoffe (){
 
-    const CoffeId = coffees.map(coffee =>{
+    const CoffeId = coffees.filter(coffee =>{
       if(coffee.id === idCoffes){
         return {
           ...coffee,
-          amount: (amount + 1)
+          amount: (contadorAmount)
         }
       }
       return coffee
+      
     })
+    
     setShopingBuy(CoffeId)
+    console.log(shopingBuy)
   }
 
-  console.log(shopingBuy.amount)
+  
+ 
 
   
 
@@ -54,16 +66,16 @@ export function Card({name,description,type,image,id,amount}: CoffesProps){
           <p>R$<strong>9,90</strong></p>
           <CounterContainer>
             <button >
-            <Minus />
+            <Minus onClick={funcContadorMinus} />
             </button>
               
-                <p>{amount}</p>
+                <p>{contadorAmount}</p>
             <button >
-            <Plus onClick={AmountCoffe}/>
+            <Plus onClick={funcContadorPlus}/>
             </button>
            
           </CounterContainer>
-           <ButtonShopCart>
+           <ButtonShopCart onClick={AmountCoffe}>
               <ShoppingCartSimple width={22} height={22} weight="fill"/>
             </ButtonShopCart>
         </PriceAndAmountContainer>

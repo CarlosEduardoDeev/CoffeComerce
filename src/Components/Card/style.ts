@@ -89,7 +89,9 @@ export const CounterContainer = styled.div`
     padding: 8px;
 
     button{
-        
+        display: flex;
+        align-items: center;
+        cursor: pointer;
         color: ${props => props.theme["purple"]};
         border: unset;
         background: none;
@@ -97,7 +99,9 @@ export const CounterContainer = styled.div`
         height: 14px;
     }
 
-    p{  
+    p{   
+        display: flex;
+        align-items: center;
         padding: 8px;
         font-size: 1rem;
         font-weight: 400;
@@ -105,9 +109,11 @@ export const CounterContainer = styled.div`
     }
     
 `
-export const ButtonShopCart = styled.div`
+export const ButtonShopCart = styled.button`
             display: flex;
             width: 38px;
+            border: transparent;
+            cursor: pointer;
             height: 38px;
             color: ${props => props.theme["white"]};
             background-color: ${props => props.theme["purple-dark"]};
