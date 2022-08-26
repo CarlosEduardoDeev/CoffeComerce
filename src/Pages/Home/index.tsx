@@ -10,7 +10,7 @@ import { ContainerListCoffee, ContainerPage, ListContainerCoffee, TitleMenuCoffe
 
 export function Home(){
 
-    const [amount,setAmount] = useState(0)
+
  
 
 

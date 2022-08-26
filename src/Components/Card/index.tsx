@@ -1,6 +1,7 @@
-import { CardContainer, DescriptionCoffee, TitleCoffe, TitleTypeCoffeeCard,PriceAndAmountContainer, CounterContainer } from "./style";
-import {Plus,Minus} from 'phosphor-react'
-
+import { CardContainer,ButtonShopCart, DescriptionCoffee, TitleCoffe, TitleTypeCoffeeCard,PriceAndAmountContainer, CounterContainer } from "./style";
+import {Plus,Minus,ShoppingCartSimple} from 'phosphor-react'
+import { useState } from "react";
+import { coffees } from "../../Contexts/Context";
 
 interface CoffesProps {
   id: string;
@@ -12,12 +13,31 @@ interface CoffesProps {
 }
 
 
-export function Card({name,description,type,image}: CoffesProps){
 
-  const Start = () =>{
-    console.log('Test')
+export function Card({name,description,type,image,id,amount}: CoffesProps){
+  const [shopingBuy,setShopingBuy] = useState([] as any)
+
+
+  const idCoffes = id
+
+  function AmountCoffe (){
+
+    const CoffeId = coffees.map(coffee =>{
+      if(coffee.id === idCoffes){
+        return {
+          ...coffee,
+          amount: (amount + 1)
+        }
+      }
+      return coffee
+    })
+    setShopingBuy(CoffeId)
   }
+
+  console.log(shopingBuy.amount)
+
   
+
     return(
       <CardContainer>
             <img src={image}/>
@@ -33,15 +53,19 @@ export function Card({name,description,type,image}: CoffesProps){
         <PriceAndAmountContainer>
           <p>R$<strong>9,90</strong></p>
           <CounterContainer>
-            <button onClick={Start}>
+            <button >
             <Minus />
             </button>
               
-                <p>1</p>
-            <button onClick={Start}>
-            <Plus/>
+                <p>{amount}</p>
+            <button >
+            <Plus onClick={AmountCoffe}/>
             </button>
+           
           </CounterContainer>
+           <ButtonShopCart>
+              <ShoppingCartSimple width={22} height={22} weight="fill"/>
+            </ButtonShopCart>
         </PriceAndAmountContainer>
       </CardContainer>  
     )

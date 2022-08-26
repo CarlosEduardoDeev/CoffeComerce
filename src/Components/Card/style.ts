@@ -54,13 +54,15 @@ export const PriceAndAmountContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 28px;
+    gap: 20px;
     flex-direction: row;
     margin-top: 33px;
     margin-bottom: 20px;
+    text-align :right ;
    
     
-    p{
+    p{  
+       text-align :right ;
        line-height: 1.138rem;
        font-weight: 400;
        font-size: 0.875rem
@@ -83,7 +85,7 @@ export const CounterContainer = styled.div`
     height: 2.375rem;
     background-color: ${props => props.theme["base-button"]};
     border-radius: 6px;
-    gap: 5px;
+
     padding: 8px;
 
     button{
@@ -102,4 +104,14 @@ export const CounterContainer = styled.div`
         color: ${props => props.theme["base-title"]};
     }
     
+`
+export const ButtonShopCart = styled.div`
+            display: flex;
+            width: 38px;
+            height: 38px;
+            color: ${props => props.theme["white"]};
+            background-color: ${props => props.theme["purple-dark"]};
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
 `
