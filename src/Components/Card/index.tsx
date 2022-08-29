@@ -1,4 +1,4 @@
-import { CardContainer,ButtonShopCart, DescriptionCoffee, TitleCoffe, TitleTypeCoffeeCard,PriceAndAmountContainer, CounterContainer } from "./style";
+import { TypeContainer,CardContainer,ButtonShopCart, DescriptionCoffee, TitleCoffe, TitleTypeCoffeeCard,PriceAndAmountContainer, CounterContainer } from "./style";
 import {Plus,Minus,ShoppingCartSimple} from 'phosphor-react'
 import { useState } from "react";
 import { coffees } from "../../Contexts/Context";
@@ -7,14 +7,16 @@ interface CoffesProps {
   id: string;
   name: string;
   type: string;
+  typeduo?: string;
+  typetrio?: string;
   description: string,
-  amount: number;
+  amount: any;
   image: any;
 }
 
 
 
-export function Card({name,description,type,image,id,amount}: CoffesProps){
+export function Card({name,description,type,image,id,typeduo,typetrio}: CoffesProps){
   const [shopingBuy,setShopingBuy] = useState([] as any)
   const [contadorAmount,setContadorAmount] = useState(0)
 
@@ -46,16 +48,25 @@ export function Card({name,description,type,image,id,amount}: CoffesProps){
   }
 
   
- 
+  const typeduocontainer = typeduo
 
   
 
     return(
       <CardContainer>
             <img src={image}/>
+        <TypeContainer>
+
         <TitleTypeCoffeeCard>
             {type}
         </TitleTypeCoffeeCard>
+
+      {typeduo === undefined ?   <div></div>:<TitleTypeCoffeeCard> {typeduo}</TitleTypeCoffeeCard> }
+      {typetrio === undefined ?  <div></div> : <TitleTypeCoffeeCard> {typetrio}</TitleTypeCoffeeCard>}
+        
+
+        </TypeContainer>
+     
         <TitleCoffe>
             {name}
         </TitleCoffe>

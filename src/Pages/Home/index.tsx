@@ -29,6 +29,8 @@ export function Home(){
                         id={coffee.id}
                         image={coffee.image}
                         type={coffee.type}
+                        typeduo={coffee.typeduo}
+                        typetrio={coffee.typetrio}
                         name={coffee.name}
                         amount={coffee.amount}
                         description={coffee.description} 

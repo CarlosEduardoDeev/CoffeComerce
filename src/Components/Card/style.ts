@@ -15,13 +15,12 @@ export const CardContainer = styled.div`
 export const TitleTypeCoffeeCard = styled.div`
     font-size:0.625rem ;
     font-weight: 700;
-    width:5.063rem ;
-    height:1.313rem ;
+   
     align-items: center;
     justify-content: center;
     display: flex;
     border-radius: 100px;
-    padding: 4px 12px;
+    padding: 4px 8px;
     margin-top:12px ;
     
     color: ${props => props.theme["yellow-dark"]};
@@ -48,6 +47,7 @@ export const DescriptionCoffee = styled.div`
     line-height: 1.138rem;
     width: 13.5rem;
     margin-top: 8px;
+    margin-bottom: 8px;
     color: ${props => props.theme["base-label"]};
 `
 export const PriceAndAmountContainer = styled.div`
@@ -120,4 +120,7 @@ export const ButtonShopCart = styled.button`
             justify-content: center;
             align-items: center;
             border-radius: 6px;
+`
+export const TypeContainer = styled.div`
+    display: flex;
 `
