@@ -26,6 +26,7 @@ export function Home(){
                 return(
                     <Card
                         key={coffee.id}
+                        price={coffee.price}
                         id={coffee.id}
                         image={coffee.image}
                         type={coffee.type}

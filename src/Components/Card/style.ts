@@ -123,4 +123,7 @@ export const ButtonShopCart = styled.button`
 `
 export const TypeContainer = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4px
 `

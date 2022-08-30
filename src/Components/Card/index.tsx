@@ -10,13 +10,14 @@ interface CoffesProps {
   typeduo?: string;
   typetrio?: string;
   description: string,
-  amount: any;
-  image: any;
+  amount: string | any;
+  image: string | any;
+  price:string | any;
 }
 
 
 
-export function Card({name,description,type,image,id,typeduo,typetrio}: CoffesProps){
+export function Card({name,description,type,image,id,typeduo,typetrio,price}: CoffesProps){
   const [shopingBuy,setShopingBuy] = useState([] as any)
   const [contadorAmount,setContadorAmount] = useState(0)
 
@@ -74,12 +75,12 @@ export function Card({name,description,type,image,id,typeduo,typetrio}: CoffesPr
             {description}
         </DescriptionCoffee>
         <PriceAndAmountContainer>
-          <p>R$<strong>9,90</strong></p>
+          <p>R$<strong>{price}</strong></p>
           <CounterContainer>
             <button >
             <Minus onClick={funcContadorMinus} />
             </button>
-              
+                
                 <p>{contadorAmount}</p>
             <button >
             <Plus onClick={funcContadorPlus}/>
