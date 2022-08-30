@@ -1,7 +1,8 @@
 import { TypeContainer,CardContainer,ButtonShopCart, DescriptionCoffee, TitleCoffe, TitleTypeCoffeeCard,PriceAndAmountContainer, CounterContainer } from "./style";
 import {Plus,Minus,ShoppingCartSimple} from 'phosphor-react'
-import { useState } from "react";
-import { coffees } from "../../Contexts/Context";
+import { useContext, useState } from "react";
+import { CoffeContext } from "../../Contexts/CoffeContext";
+
 
 interface CoffesProps {
   id: string;
@@ -21,7 +22,7 @@ export function Card({name,description,type,image,id,typeduo,typetrio,price}: Co
   const [shopingBuy,setShopingBuy] = useState([] as any)
   const [contadorAmount,setContadorAmount] = useState(0)
 
-
+  const {coffees} =useContext(CoffeContext)
 
   const idCoffes = id
   function funcContadorPlus(){
@@ -49,7 +50,7 @@ export function Card({name,description,type,image,id,typeduo,typetrio,price}: Co
   }
 
   
-  const typeduocontainer = typeduo
+  
 
   
 

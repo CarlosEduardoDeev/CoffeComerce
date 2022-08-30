@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { HomeBanner } from "../../Components/BannerHome";
 import { Card } from "../../Components/Card";
-import { coffees } from "../../Contexts/Context";
+import { CoffeContext} from '../../Contexts/CoffeContext'
 import { ContainerListCoffee, ContainerPage, ListContainerCoffee, TitleMenuCoffee } from "./style";
 
 
@@ -10,7 +10,7 @@ import { ContainerListCoffee, ContainerPage, ListContainerCoffee, TitleMenuCoffe
 
 export function Home(){
 
-
+   const { coffees} = useContext(CoffeContext)
  
 
 
