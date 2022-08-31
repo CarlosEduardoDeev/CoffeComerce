@@ -24,6 +24,7 @@ export const PayContainer = styled.div`
     background-color: ${(props) => props.theme["base-card"]};
     height: 12.938rem;
     width: 40rem;
+    padding: 2.5rem;
 
 `
 export const InputsContainer = styled.div`
@@ -83,6 +84,7 @@ export const BaseInputContainer = styled.input`
         align-items: center;
         padding: 12px;
         gap: 12px;
+        height:2.625rem;
         color: ${props => props.theme["base-label"]};
         border-radius: 6px;
         background-color: ${props => props.theme["base-input"]} ;
@@ -90,12 +92,62 @@ export const BaseInputContainer = styled.input`
 `
 export const CepInput = styled(BaseInputContainer)`
         width: 12.5rem;
-        height:2.625rem;
         margin-top: 32px;
 `
 export const RuaInput = styled(BaseInputContainer)`
         width: 35rem;
-        height:2.625rem;
         margin-top: 1rem;
        
+`
+export const NumeroInput = styled(BaseInputContainer)`
+        width: 12.5rem;
+`
+export const ComplementoInput = styled(BaseInputContainer)`
+        width:21.75rem;
+`
+export const ContainerDisplay = styled.div`
+        display: flex; 
+        margin-top: 1rem;
+        gap: 12px;
+`
+export const BairroInput = styled(BaseInputContainer)`
+        width: 12.5rem;
+`
+export const CidadeInput = styled(BaseInputContainer)`
+        width: 17.25rem;    
+`
+export const UFinput = styled(BaseInputContainer)`
+        width:3.75rem;
+`
+export const PayChoseContainer = styled.div`
+        margin-top:32px ;
+        gap:12px;
+        display: flex;
+`
+
+export const BaseTypePay = styled.button`
+        height: 3.188rem;
+        width: 11.167rem;
+        display: flex;
+        cursor: pointer;
+        padding: 1rem;
+        border: transparent;
+        align-items: center;
+        gap:12px;
+        background-color: ${props => props.theme["base-button"]};
+
+        p{  
+            font-family:"Roboto";
+            color: ${props => props.theme["base-text"]};
+            font-size:12px;
+            font-weight:400;
+        }
+
+        &:hover{
+            background-color: ${props => props.theme.purple};
+        }
+        ::before{
+            background-color: ${props => props.theme["purple-dark"]};
+        }
+
 `
