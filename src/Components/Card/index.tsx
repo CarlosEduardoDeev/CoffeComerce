@@ -88,7 +88,7 @@ export function Card({name,description,type,image,id,typeduo,typetrio,price}: Co
             </button>
            
           </CounterContainer>
-           <ButtonShopCart onClick={AmountCoffe}>
+            <ButtonShopCart onClick={AmountCoffe}>
               <ShoppingCartSimple width={22} height={22} weight="fill"/>
             </ButtonShopCart>
         </PriceAndAmountContainer>

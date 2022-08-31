@@ -99,6 +99,10 @@ export const CounterContainer = styled.div`
         height: 14px;
     }
 
+    button:hover{
+        color: ${props => props.theme["purple-dark"]};
+    }
+
     p{   
         display: flex;
         align-items: center;
@@ -120,6 +124,12 @@ export const ButtonShopCart = styled.button`
             justify-content: center;
             align-items: center;
             border-radius: 6px;
+            transition:0.2s;
+
+            &:hover{
+
+                background-color: ${props => props.theme["purple"]};
+            }
 `
 export const TypeContainer = styled.div`
     display: flex;

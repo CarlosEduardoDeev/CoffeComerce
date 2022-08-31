@@ -1,4 +1,4 @@
-import { ReactNode, createContext } from "react";
+import { ReactNode, createContext, useState } from "react";
 import {v4 as uuidv4} from 'uuid'
 import Coffee1 from '../../src/assets/CoffeTypes/Coffee1.svg'
 import Coffee2 from '../../src/assets/CoffeTypes/Coffee2.svg'
@@ -22,7 +22,7 @@ import Coffee14 from '../../src/assets/CoffeTypes/Coffee14.svg'
     typeduo?: string;
     typetrio?: string;
     description: string,
-    amount: string | any;
+    amount?: number;
     image: string | any;
     price:string | any;
   } 
@@ -31,17 +31,23 @@ import Coffee14 from '../../src/assets/CoffeTypes/Coffee14.svg'
 
     interface CoffeeContextType {
         coffees:CoffesProps[];
-        
+        test:any
     }
     interface ChildrenProps{
         children:ReactNode
     }
+
+   
 
 
 export const CoffeContext = createContext({} as CoffeeContextType)
 
 
 export function CoffeContextProvider({children}:ChildrenProps){
+
+
+
+    const [test,setTest] = useState(5)
 
      const coffees = [
         {
@@ -188,6 +194,7 @@ export function CoffeContextProvider({children}:ChildrenProps){
         <CoffeContext.Provider
             value={{
                 coffees,
+                test,
             }}
         >
             {children}

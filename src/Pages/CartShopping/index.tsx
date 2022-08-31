@@ -24,7 +24,7 @@ import { CoffeContext } from '../../Contexts/CoffeContext'
 
 export function CartShopping(){
 
-    const {coffees} =useContext(CoffeContext)
+    const {coffees,test} =useContext(CoffeContext)
 
     console.log(coffees)
     return (

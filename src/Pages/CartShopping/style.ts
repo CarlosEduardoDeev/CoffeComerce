@@ -57,6 +57,9 @@ export const CartFinish = styled.div`
 
     width: 28rem;
     height:31.125rem;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
     background-color: ${(props) => props.theme["base-card"]};
 `
 
